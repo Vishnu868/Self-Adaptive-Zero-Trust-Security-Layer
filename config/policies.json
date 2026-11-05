@@ -1,0 +1,9 @@
+{
+  "thresholds": { "low": 0.3, "high": 0.6 },
+  "policies": {
+    "LOW":    { "action": "ALLOW",     "response_code": 200, "description": "Normal access granted" },
+    "MEDIUM": { "action": "CHALLENGE", "response_code": 401, "description": "Step-up authentication required" },
+    "HIGH":   { "action": "BLOCK",     "response_code": 403, "description": "Connection blocked - potential attack" }
+  },
+  "metadata_fields": ["dur", "spkts", "dpkts", "sbytes", "dbytes", "rate"]
+}
